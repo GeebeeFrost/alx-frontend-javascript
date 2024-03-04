@@ -1,3 +1,6 @@
 # Auto save files
 *~
 *.swp
+
+# Node modules
+node_modules/
