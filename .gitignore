@@ -7,3 +7,6 @@ node_modules/
 
 # Test files
 *main.js
+
+# VSCode config
+.vscode/
