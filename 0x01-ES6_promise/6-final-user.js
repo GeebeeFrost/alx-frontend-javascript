@@ -10,10 +10,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     for (const promise of promises) {
       results.push({
         status: promise.status,
-        value:
-          promise.status === 'fulfilled'
-            ? promise.value
-            : promise.reason.message,
+        value: promise.value || promise.reason,
       });
     }
     return results;
