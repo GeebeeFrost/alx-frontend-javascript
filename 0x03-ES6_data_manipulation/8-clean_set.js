@@ -1,5 +1,9 @@
 export default function cleanSet(set, startString) {
-  if (startString === '') return '';
+  if (
+    typeof set !== 'object'
+    || typeof startString !== 'string'
+    || startString === ''
+  ) return '';
   const arr = [];
   set.forEach((element) => {
     if (typeof element === 'string' && element.startsWith(startString)) {
