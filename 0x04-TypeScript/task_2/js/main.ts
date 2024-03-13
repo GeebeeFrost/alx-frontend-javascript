@@ -41,13 +41,22 @@ function createEmployee(salary: number | string): Director | Teacher {
 
 // =====================================================================
 
-function isDirector(employee: Director | Teacher) {
+function isDirector(employee: Director | Teacher): boolean {
   return employee instanceof Director;
 }
 
-function executeWork(employee: Director | Teacher) {
-  if (employee instanceof Director) return employee.workDirectorTasks();
-  if (employee instanceof Teacher) return employee.workTeacherTasks();
+function executeWork(employee: Director | Teacher): void {
+  if (employee instanceof Director) employee.workDirectorTasks();
+  if (employee instanceof Teacher) employee.workTeacherTasks();
+}
+
+// =====================================================================
+
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') return 'Teaching Math';
+  if (todayClass === 'History') return 'Teaching History';
 }
 
 // =====================================================================
